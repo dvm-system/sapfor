@@ -25,6 +25,10 @@ option(BUILD_lp_solve "Build Mixed Integer Linear Programming (MILP) solver" OFF
 
 set (TSAR_FOLDER "Tools" CACHE STRING "Specify IDE folder for TSAR.")
 
+if(BUILD_TESTING)
+  enable_testing()
+endif()
+
 add_subdirectory(bcl)
 set(CMAKE_PREFIX_PATH ${CMAKE_CURRENT_BINARY_DIR}/bcl ${CMAKE_PREFIX_PATH})
 
