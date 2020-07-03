@@ -16,7 +16,7 @@
 cmake_minimum_required(VERSION 3.4.3)
 project(SAPFOR VERSION 3.0.0 LANGUAGES CXX)
 
-set(SAPFOR_VERSION_SUFFIX "alpha")
+set(SAPFOR_VERSION_SUFFIX "alpha.1")
 set(SAPFOR_VERSION "${SAPFOR_VERSION}-${SAPFOR_VERSION_SUFFIX}")
 
 set(SAPFOR_DESCRIPTION "System FOR Automate Parallelization")
