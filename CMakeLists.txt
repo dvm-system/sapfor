@@ -30,6 +30,7 @@ set (TSAR_FOLDER "Tools" CACHE STRING "Specify IDE folder for TSAR.")
 
 if(BUILD_TESTING)
   enable_testing()
+  add_subdirectory(utils)
 endif()
 
 add_subdirectory(bcl)

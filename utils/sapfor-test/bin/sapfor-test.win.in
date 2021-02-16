@@ -1,0 +1,6 @@
+@echo off
+::=== Variables set by CMake ===
+set perl=@ST_PERL_EXECUTABLE@
+set lib=%~dp0/@ST_LIBRARY_PATH@
+::==============================
+call "%perl%" -I "%lib%" "%~dp0/sapfor-test.pl" %*
