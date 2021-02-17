@@ -61,6 +61,8 @@ if (TSAR_VERSION_BUILD)
   set(SAPFOR_VERSION "${SAPFOR_VERSION}+${TSAR_VERSION_BUILD}")
 endif()
 
+add_subdirectory(extensions)
+
 # Configure CPack.
 # Configure it here to overwrite configuration inside LLVM directory (if LLVM is build with SAPFOR).
 set(CPACK_PACKAGE_INSTALL_DIRECTORY "SAPFOR")
