@@ -19,6 +19,7 @@ my $tasks_path = rel2abs($cf->get_var('', 'task_path'), $root);
 my @pts_opts = $cf->get_arr('', 'options');
 
 my @args = ($^X, $pts, "-I$plugins_path", "-T$tasks_path", @pts_opts, @ARGV);
+dbg1 and print "command:\n", map "  #$_#\n", @args;
 system({$^X} @args) == -1 and die "$!\n";
 exit $?;
 

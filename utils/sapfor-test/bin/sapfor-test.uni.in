@@ -5,5 +5,5 @@ dir=`dirname $0`
 perl=@ST_PERL_EXECUTABLE@
 lib=$dir/@ST_LIBRARY_PATH@
 ############################
-"$perl" -I "$lib" "$dir/sapfor-test.pl" $*
+"$perl" -I "$lib" "$dir/sapfor-test.pl" "$@"
 
