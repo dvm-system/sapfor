@@ -61,6 +61,11 @@ if (TSAR_VERSION_BUILD)
   set(SAPFOR_VERSION "${SAPFOR_VERSION}+${TSAR_VERSION_BUILD}")
 endif()
 
+# All internal packages should populate their root paths in this property.
+# We add these paths at the begining of CMAKE_PREFIX_PATH
+# to make find_package() uses their first.
+get_property(PACKAGE_PREFIX_PATH GLOBAL PROPERTY PACKAGE_PREFIX_PATH)
+list(PREPEND CMAKE_PREFIX_PATH ${PACKAGE_PREFIX_PATH})
 add_subdirectory(extensions)
 
 # Configure CPack.
