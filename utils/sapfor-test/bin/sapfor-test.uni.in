@@ -1,9 +1,5 @@
 #!/bin/bash
 
-dir=`dirname $0`
-## Variables set by CMake ##
-perl=@ST_PERL_EXECUTABLE@
-lib=$dir/@ST_LIBRARY_PATH@
-############################
-"$perl" -I "$lib" "$dir/sapfor-test.pl" "$@"
+sapfor_test_dir=`dirname $0`
+"@ST_PERL_EXECUTABLE@" -I "$sapfor_test_dir/@ST_LIBRARY_PATH@" "$sapfor_test_dir/sapfor-test.pl" "$@"
 
