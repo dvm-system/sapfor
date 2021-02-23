@@ -33,8 +33,12 @@ if(BUILD_TESTING)
   add_subdirectory(utils)
 endif()
 
-add_subdirectory(bcl)
-set(CMAKE_PREFIX_PATH ${CMAKE_CURRENT_BINARY_DIR}/bcl ${CMAKE_PREFIX_PATH})
+if (EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/bcl/CMakeLists.txt)
+  add_subdirectory(bcl)
+  set(CMAKE_PREFIX_PATH ${CMAKE_CURRENT_BINARY_DIR}/bcl ${CMAKE_PREFIX_PATH})
+else()
+  message(WARNING "Configure without BCL: sources are not available")
+endif()
 
 if(BUILD_APC)
   set(APC_CORE_FOLDER "APC libraries"
@@ -67,6 +71,10 @@ endif()
 get_property(PACKAGE_PREFIX_PATH GLOBAL PROPERTY PACKAGE_PREFIX_PATH)
 list(PREPEND CMAKE_PREFIX_PATH ${PACKAGE_PREFIX_PATH})
 add_subdirectory(extensions)
+
+if (NOT TARGET tsar)
+  return()
+endif()
 
 # Configure CPack.
 # Configure it here to overwrite configuration inside LLVM directory (if LLVM is build with SAPFOR).
