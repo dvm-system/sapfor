@@ -7,3 +7,6 @@
 [submodule "bcl"]
 	path = bcl
 	url = https://github.com/dvm-system/bcl.git
+[submodule "gui/tsar-advisor"]
+	path = gui/tsar-advisor
+	url = https://github.com/dvm-system/tsar-advisor.git

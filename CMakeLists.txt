@@ -25,6 +25,7 @@ set(SAPFOR_HOMEPAGE_URL "http://dvm-system.org/")
 option(BUILD_APC "Build automated parallelizing compiler" OFF)
 option(BUILD_DYNA "Build dynmaic analyzer runtime" OFF)
 option(BUILD_lp_solve "Build Mixed Integer Linear Programming (MILP) solver" OFF)
+option(BUILD_ADVISOR "Build Microsoft Visual Studio Code extension" OFF)
 
 set (TSAR_FOLDER "Tools" CACHE STRING "Specify IDE folder for TSAR.")
 
@@ -59,6 +60,7 @@ if(BUILD_lp_solve)
 endif()
 
 add_subdirectory(analyzers)
+add_subdirectory(gui)
 
 get_property(TSAR_VERSION_BUILD GLOBAL PROPERTY TSAR_VERSION_BUILD)
 if (TSAR_VERSION_BUILD)
