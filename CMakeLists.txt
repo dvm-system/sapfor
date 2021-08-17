@@ -42,13 +42,14 @@ else()
 endif()
 
 if(BUILD_APC)
+  set(BUILD_APC_C ON)
   set(APC_CORE_FOLDER "APC libraries"
     CACHE STRING "Specify IDE folder for APC core library.")
   set(APC_LIBRARY_FOLDER "APC libraries"
     CACHE STRING "Specify IDE folder for APC internal libraries.")
-  add_subdirectory(experts/Sapfor_2017)
+  add_subdirectory(experts/apc)
   set(CMAKE_PREFIX_PATH
-    ${CMAKE_CURRENT_BINARY_DIR}/experts/Sapfor_2017 ${CMAKE_PREFIX_PATH})
+    ${CMAKE_CURRENT_BINARY_DIR}/experts/apc ${CMAKE_PREFIX_PATH})
 endif()
 
 if(BUILD_lp_solve)
