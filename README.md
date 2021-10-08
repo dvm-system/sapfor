@@ -27,3 +27,23 @@ git clone --recurse-submodules https://github.com/dvm-system/sapfor.git
 ```
 
 Visit the [SAPFOR Wiki](https://github.com/dvm-system/tsar/wiki) (in Russian) for more information.
+
+## References
+
+#### Static analysis
+
+Kataev, N.: Application of the LLVM Compiler Infrastructure to the Program Analysis in SAPFOR. In: Voevodin V., Sobolev S. (eds) Supercomputing. RuSCDays 2018.
+Communications in Computer and Information Science, vol. 965, pp. 487--499. Springer, Cham (2018) DOI: 10.1007/978-3-030-05807-4_41
+
+#### Automated parallelization
+
+Kataev, N.: LLVM Based Parallelization of C Programs for GPU. In: Voevodin V., Sobolev S. (eds) Supercomputing. RuSCDays 2020. Communications in Computer and Information Science, vol 1331. Springer, Cham. pp. 436--448 (2020) DOI: 10.1007/978-3-030-64616-5_38
+
+#### Dynamic analysis
+
+Kataev, N., Smirnov, A., Zhukov A.: Dynamic data-dependence analysis in SAPFOR.
+In: CEUR Workshop Proceedings, vol. 2543, pp 199--208 (2020)
+
+#### Interactive subsystem
+
+Kataev, N.: Interactive Parallelization of C Programs in SAPFOR. In: Scientific Services & Internet 2020. CEUR Workshop Proceedings, vol. 2784, pp. 139--148 (2020)
