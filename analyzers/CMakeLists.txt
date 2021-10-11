@@ -7,6 +7,8 @@ endif()
 if(BUILD_DYNA)
   set (DYNA_FOLDER "DYNA Runtime"
     CACHE STRING "Specify IDE folder for DYNA Runtime.")
-  set(Dyna_install_path lib)
+  set (DYNA_TOOLS_FOLDER "Tools"
+    CACHE STRING "Specify IDE folder for DYNA Tools.")
+  set(Dyna_install ON)
   add_subdirectory(dyna)
 endif()
