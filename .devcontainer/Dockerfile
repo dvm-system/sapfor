@@ -8,7 +8,7 @@ RUN apt-get update && \
     apt-get install -y clang-11 llvm-11-dev libclang-11-dev \
                        zlib1g-dev libomp-11-dev perl libexpat1-dev npm
 RUN cpan XML::Parser File::chdir Text::Diff Graph Graph::Reader::Dot
-RUN npm install -g vsce
+RUN node --version | grep -q v10 && npm install -g --unsafe-perm vsce@1.103.1 || npm install -g --unsafe-perm vsce
 
 # Get external tools.
 WORKDIR repo
