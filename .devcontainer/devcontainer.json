@@ -20,6 +20,8 @@
 			],
 		"C_Cpp.clang_format_style": "LLVM",
 		"tsar-advisor.advanced.analysisServer": "tsar-server"
+		"cmake.parallelJobs": 4,
+		"cmake.generator": "Unix Makefiles"
 	},
 
 	// Add the IDs of extensions you want installed when the container is created.
