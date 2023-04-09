@@ -8,27 +8,34 @@
 		"args": { "VARIANT": "ubuntu-20.04" }
 	},
 	"runArgs": [ "--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined"],
-
-	// Set *default* container specific settings.json values on container create.
-	"settings": {
-		"terminal.integrated.shell.linux": "/bin/bash",
-		"cmake.configureOnOpen": false,
-		"files.trimFinalNewlines": true,
-		"files.trimTrailingWhitespace": true,
-		"editor.rulers": [
-			80
+	"customizations": {
+		"vscode": {
+			// Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
+				"ms-vscode.cpptools",
+				"ms-vscode.cmake-tools"
 			],
-		"C_Cpp.clang_format_style": "LLVM",
-		"tsar-advisor.advanced.analysisServer": "tsar-server"
-		"cmake.parallelJobs": 4,
-		"cmake.generator": "Unix Makefiles"
+			// Set *default* container specific settings.json values on container create.
+			"settings": {
+				"terminal.integrated.profiles.linux": {
+					"bash": {
+						"path": "/bin/bash",
+						"icon": "terminal-bash"
+					}
+				},
+				"terminal.integrated.defaultProfile.linux": "bash",
+				"cmake.configureOnOpen": false,
+				"files.trimFinalNewlines": true,
+				"files.trimTrailingWhitespace": true,
+				"editor.rulers": [
+					80
+				],
+				"C_Cpp.clang_format_style": "LLVM",
+				"tsar-advisor.advanced.analysisServer": "tsar-server",
+				"cmake.parallelJobs": 4,
+				"cmake.generator": "Unix Makefiles"
+			}
+		}
 	},
-
-	// Add the IDs of extensions you want installed when the container is created.
-	"extensions": [
-		"ms-vscode.cpptools",
-		"ms-vscode.cmake-tools"
-	],
-
 	"postCreateCommand": ".devcontainer/create.sh"
 }
